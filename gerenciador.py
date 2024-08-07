@@ -14,7 +14,7 @@ class Aluno:
         return f"Nome: {self.nome}\n Matricula: {self.matricula}\n Curso: {self.curso}\n Notas: {self.notas}"
 
 class GerenciamentoAlunos:
-    def __init__(self):
+    def __init__(self,notas):
         self.alunos = []
 
     def timer(self):
@@ -64,11 +64,10 @@ class GerenciamentoAlunos:
         print("Aluno cadastrado com sucesso!\n")
 
     def listar_alunos(self):
-        if not self.alunos:
-            print("Nenhum aluno cadastrado.\n")
-        else:
-            for aluno in self.alunos:
+         for aluno in self.alunos:
                 print(f"{aluno}\n")
+         if not self.alunos:
+            print("Nenhum aluno cadastrado.\n")
 
     def editar_aluno(self):
         matricula = input("Digite a matricula do aluno: ")
